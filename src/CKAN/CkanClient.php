@@ -555,6 +555,42 @@ class CkanClient
     }
 
     /**
+     * Create datastore (resource)
+     *
+     * @param $data
+     *
+     * @return mixed
+     * @link http://docs.ckan.org/en/latest/maintaining/datastore.html#ckanext.datastore.logic.action.datastore_create
+     */
+    public function datastore_create($data)
+    {
+        return $this->make_request(
+            'POST',
+            'action/datastore_create',
+            $data
+        );
+    }
+
+    /**
+     * Add data to datastore (resource)
+     *
+     * @param $data
+     *
+     * @return mixed
+     * @link http://docs.ckan.org/en/latest/maintaining/datastore.html#ckanext.datastore.logic.action.datastore_upsert
+     */
+    public function datastore_upsert(array $data)
+    {
+        $data = json_encode($data, JSON_PRETTY_PRINT);
+
+        return $this->make_request(
+            'POST',
+            'action/datastore_upsert',
+            $data
+        );
+    }
+
+    /**
      * Create a dataset (package)
      *
      * @param $data
