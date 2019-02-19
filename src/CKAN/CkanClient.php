@@ -634,8 +634,10 @@ class CkanClient
      * @return mixed
      * @link http://docs.ckan.org/en/latest/api/index.html#ckan.logic.action.create.organization_create
      */
-    public function organization_create($data)
+    public function organization_create(array $data)
     {
+        $data = json_encode($data, JSON_PRETTY_PRINT);
+
         return $this->make_request(
             'POST',
             'action/organization_create',
