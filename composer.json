@@ -1,5 +1,5 @@
 {
-  "name": "gsa/ckan-php-client",
+  "name": "cdn/ckan-php-client",
   "description": "CKAN php client by GSA",
   "minimum-stability": "dev",
   "license": "GPL-3.0+",
@@ -8,6 +8,10 @@
     {
       "name": "Alex Perfilov",
       "email": "alexandr.perfilov@reisystems.com",
+      "role": "Developer"
+    },
+    {
+      "name": "Chris Neale",
       "role": "Developer"
     }
   ],
