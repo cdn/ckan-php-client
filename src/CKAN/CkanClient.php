@@ -591,6 +591,23 @@ class CkanClient
     }
 
     /**
+     * Create an organization
+     *
+     * @param $data
+     *
+     * @return mixed
+     * @link http://docs.ckan.org/en/latest/api/index.html#ckan.logic.action.create.organization_create
+     */
+    public function organization_create($data)
+    {
+        return $this->make_request(
+            'POST',
+            'action/organization_create',
+            $data
+        );
+    }
+
+    /**
      * patch a organization
      *
      * @param $data
