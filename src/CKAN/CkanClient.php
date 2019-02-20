@@ -140,7 +140,8 @@ class CkanClient
      */
     private function make_request($method, $uri, $data = null)
     {
-        timer();
+//        if (function_exists('timer'))
+//            timer();
         echo $uri.PHP_EOL;
         $method = strtoupper($method);
         if (!in_array($method, ['GET', 'POST'])) {
@@ -628,6 +629,8 @@ class CkanClient
 
     /**
      * Create an organization
+     *
+     * Requires a sysadmin API key
      *
      * @param $data
      *
