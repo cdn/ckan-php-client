@@ -599,8 +599,10 @@ class CkanClient
      * @return mixed
      * @link http://docs.ckan.org/en/latest/api/index.html#ckan.logic.action.update.package_create
      */
-    public function package_create($data)
+    public function package_create(array $data)
     {
+        $data = json_encode($resource, JSON_PRETTY_PRINT);
+
         return $this->make_request(
             'POST',
             'action/package_create',
