@@ -563,8 +563,10 @@ class CkanClient
      * @return mixed
      * @link http://docs.ckan.org/en/latest/maintaining/datastore.html#ckanext.datastore.logic.action.datastore_create
      */
-    public function datastore_create($data)
+    public function datastore_create(array $data)
     {
+        $data = json_encode($data, JSON_PRETTY_PRINT);
+
         return $this->make_request(
             'POST',
             'action/datastore_create',
