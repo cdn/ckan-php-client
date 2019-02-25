@@ -140,8 +140,6 @@ class CkanClient
      */
     private function make_request($method, $uri, $data = null)
     {
-//        if (function_exists('timer'))
-//            timer();
   //      echo $uri.PHP_EOL;
         $method = strtoupper($method);
         if (!in_array($method, ['GET', 'POST'])) {
